@@ -17,7 +17,12 @@ namespace SimonSays
         //TODO: create guess variable to track what part of the pattern the user is at
         int guess = 0;
         Random randgen = new Random();
-    SoundPlayer = new SoundPlayer blue ;
+        SoundPlayer blue = new SoundPlayer(Properties.Resources.blue);
+        SoundPlayer green = new SoundPlayer(Properties.Resources.green);
+        SoundPlayer red = new SoundPlayer(Properties.Resources.red);
+        SoundPlayer yellow = new SoundPlayer(Properties.Resources.yellow);
+
+
 
         public GameScreen()
         {
@@ -46,6 +51,7 @@ namespace SimonSays
                 if (Form1.pattern[i] == 0)
                 {
                     redButton.BackColor = Color.LightSalmon;
+                    red.Play();
                     Refresh();
                     Thread.Sleep(500);
                     redButton.BackColor = Color.DarkRed;
@@ -57,6 +63,7 @@ namespace SimonSays
                 if (Form1.pattern[i] == 1)
                 {
                     greenButton.BackColor = Color.LightGreen;
+                    green.Play();
                     Refresh();
                     Thread.Sleep(500);
                     greenButton.BackColor = Color.ForestGreen;
@@ -66,6 +73,7 @@ namespace SimonSays
                 if (Form1.pattern[i] == 2)
                 {
                     blueButton.BackColor = Color.LightCyan;
+                    blue.Play();
                     Refresh();
                     Thread.Sleep(500);
                     blueButton.BackColor = Color.DarkBlue;
@@ -75,6 +83,7 @@ namespace SimonSays
                 if (Form1.pattern[i] == 3)
                 {
                     yellowButton.BackColor = Color.LightYellow;
+                    yellow.Play();
                     Refresh();
                     Thread.Sleep(500);
                     yellowButton.BackColor = Color.Goldenrod;
@@ -114,6 +123,7 @@ namespace SimonSays
             if (Form1.pattern[guess] == 1)
             {
                 greenButton.BackColor = Color.LightGreen;
+                green.Play();
                 Refresh();
                 Thread.Sleep(300);
                 Refresh();
@@ -142,6 +152,7 @@ namespace SimonSays
             if (Form1.pattern[guess] == 0)
             {
                 redButton.BackColor = Color.Salmon;
+                red.Play();
                 Refresh();
                 Thread.Sleep(100);
                 Refresh();
@@ -163,6 +174,7 @@ namespace SimonSays
             if (Form1.pattern[guess] == 3)
             {
                 yellowButton.BackColor = Color.LightYellow;
+                yellow.Play();
                 Refresh();
                 Thread.Sleep(100);
                 yellowButton.BackColor = Color.Goldenrod;
@@ -183,6 +195,7 @@ namespace SimonSays
             if (Form1.pattern[guess] == 2)
             {
                 blueButton.BackColor = Color.LightBlue;
+                blue.Play();
                 Refresh();
                 Thread.Sleep(100);
                 blueButton.BackColor = Color.DarkBlue;

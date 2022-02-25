@@ -47,6 +47,7 @@
             // blueButton
             // 
             this.blueButton.BackColor = System.Drawing.Color.DarkBlue;
+            this.blueButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.blueButton.Location = new System.Drawing.Point(152, 149);
             this.blueButton.Name = "blueButton";
             this.blueButton.Size = new System.Drawing.Size(110, 110);
