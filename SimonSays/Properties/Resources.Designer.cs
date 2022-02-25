@@ -61,11 +61,41 @@ namespace SimonSays.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap air_element {
+            get {
+                object obj = ResourceManager.GetObject("air_element", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream blue {
             get {
                 return ResourceManager.GetStream("blue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] earth_image {
+            get {
+                object obj = ResourceManager.GetObject("earth_image", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] fire_image {
+            get {
+                object obj = ResourceManager.GetObject("fire_image", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -102,6 +132,16 @@ namespace SimonSays.Properties {
         internal static System.Drawing.Bitmap SimonSaysImage {
             get {
                 object obj = ResourceManager.GetObject("SimonSaysImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WaterSymbolSkylanders {
+            get {
+                object obj = ResourceManager.GetObject("WaterSymbolSkylanders", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

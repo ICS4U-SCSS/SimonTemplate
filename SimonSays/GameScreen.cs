@@ -15,11 +15,9 @@ namespace SimonSays
     public partial class GameScreen : UserControl
     {
         //TODO: create guess variable to track what part of the pattern the user is at
-        int guessCount = 0;
         int guess = 0;
-        Button[] buttons = new Button[4];
         Random randgen = new Random();
-
+    SoundPlayer = new SoundPlayer blue ;
 
         public GameScreen()
         {
@@ -31,7 +29,7 @@ namespace SimonSays
             //TODO: clear the pattern list from form1, refresh, pause for a bit, and run ComputerTurn()
             Form1.pattern.Clear();
             Refresh();
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
             ComputerTurn();
         }
 
@@ -39,7 +37,6 @@ namespace SimonSays
         {
             //TODO: get rand num between 0 and 4 (0, 1, 2, 3) and add to pattern list
             Form1.pattern.Add(randgen.Next(0, 4));
-
             //TODO: create a for loop that shows each value in the pattern by lighting up approriate button
 
 
@@ -50,34 +47,40 @@ namespace SimonSays
                 {
                     redButton.BackColor = Color.LightSalmon;
                     Refresh();
-                    Thread.Sleep(1000);
+                    Thread.Sleep(500);
                     redButton.BackColor = Color.DarkRed;
                     Refresh();
+                    Thread.Sleep(500);
+
 
                 }
                 if (Form1.pattern[i] == 1)
                 {
                     greenButton.BackColor = Color.LightGreen;
                     Refresh();
-                    Thread.Sleep(1000);
+                    Thread.Sleep(500);
                     greenButton.BackColor = Color.ForestGreen;
                     Refresh();
+                    Thread.Sleep(200);
                 }
                 if (Form1.pattern[i] == 2)
                 {
                     blueButton.BackColor = Color.LightCyan;
                     Refresh();
-                    Thread.Sleep(1000);
+                    Thread.Sleep(500);
                     blueButton.BackColor = Color.DarkBlue;
                     Refresh();
+                    Thread.Sleep(200);
                 }
                 if (Form1.pattern[i] == 3)
                 {
                     yellowButton.BackColor = Color.LightYellow;
                     Refresh();
-                    Thread.Sleep(1000);
+                    Thread.Sleep(500);
                     yellowButton.BackColor = Color.Goldenrod;
                     Refresh();
+                    Thread.Sleep(200);
+
                 }
 
             }
@@ -112,10 +115,12 @@ namespace SimonSays
             {
                 greenButton.BackColor = Color.LightGreen;
                 Refresh();
-                Thread.Sleep(1000);
+                Thread.Sleep(300);
                 Refresh();
-                greenButton.ForeColor = Color.ForestGreen;
+                greenButton.BackColor = Color.ForestGreen;
                 Refresh();
+                Thread.Sleep(100);
+                guess++;
             }
             else 
             {
@@ -138,10 +143,12 @@ namespace SimonSays
             {
                 redButton.BackColor = Color.Salmon;
                 Refresh();
-                Thread.Sleep(1000);
+                Thread.Sleep(100);
                 Refresh();
-                redButton.ForeColor = Color.DarkRed;
+                redButton.BackColor = Color.DarkRed;
                 Refresh();
+                Thread.Sleep(500);
+                guess++;
             }
             else
             {
@@ -157,10 +164,11 @@ namespace SimonSays
             {
                 yellowButton.BackColor = Color.LightYellow;
                 Refresh();
-                Thread.Sleep(1000);
+                Thread.Sleep(100);
+                yellowButton.BackColor = Color.Goldenrod;
                 Refresh();
-                yellowButton.ForeColor = Color.Goldenrod;
-                Refresh();
+                Thread.Sleep(500);
+                guess++;
             }
             else
             {
@@ -176,10 +184,11 @@ namespace SimonSays
             {
                 blueButton.BackColor = Color.LightBlue;
                 Refresh();
-                Thread.Sleep(1000);
+                Thread.Sleep(100);
+                blueButton.BackColor = Color.DarkBlue;
                 Refresh();
-                blueButton.ForeColor = Color.DarkBlue;
-                Refresh();
+                Thread.Sleep(500);
+                guess++;
             }
             else
             {
