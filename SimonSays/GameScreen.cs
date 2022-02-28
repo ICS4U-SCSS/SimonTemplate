@@ -13,7 +13,7 @@ using System.Threading;
 namespace SimonSays
 {
     public partial class GameScreen : UserControl
-    {
+    {<<<<<<< master
         //TODO: create guess variable to track what part of the pattern the user is at
         int guess = 0;
         Random randgen = new Random();
@@ -21,7 +21,7 @@ namespace SimonSays
         SoundPlayer green = new SoundPlayer(Properties.Resources.green);
         SoundPlayer red = new SoundPlayer(Properties.Resources.red);
         SoundPlayer yellow = new SoundPlayer(Properties.Resources.yellow);
-
+        //TODO: create an int guess variable to track what part of the pattern the user is at>>>>>>> master
 
 
         public GameScreen()
@@ -30,16 +30,20 @@ namespace SimonSays
         }
 
         private void GameScreen_Load(object sender, EventArgs e)
-        {
+        {<<<<<<< master
             //TODO: clear the pattern list from form1, refresh, pause for a bit, and run ComputerTurn()
             Form1.pattern.Clear();
             Refresh();
             Thread.Sleep(500);
             ComputerTurn();
+            //TODO: clear the pattern list from form1
+            //TODO: refresh
+            //TODO: pause for a bit
+            //TODO: run ComputerTurn()>>>>>>> master
         }
 
         private void ComputerTurn()
-        {
+        {<<<<<<< master
             //TODO: get rand num between 0 and 4 (0, 1, 2, 3) and add to pattern list
             Form1.pattern.Add(randgen.Next(0, 4));
             //TODO: create a for loop that shows each value in the pattern by lighting up approriate button
@@ -95,6 +99,27 @@ namespace SimonSays
             }
             //TODO: get guess index value back to 0
             guess = 0;
+            //TODO: get rand num between 0 and 4 (0, 1, 2, 3) and add to pattern list. Each number represents a button. For example, 0 may be green, 1 may be blue, etc.
+
+            //TODO: create a for loop that shows each value in the pattern by lighting up approriate button
+
+            //TODO: set guess value back to 0
+        }
+
+        //TODO: create one of these event methods for each button
+        private void greenButton_Click(object sender, EventArgs e)
+        {
+            //TODO: is the value in the pattern list at index [guess] equal to a green?
+                // change button color
+                // play sound
+                // refresh
+                // pause
+                // set button colour back to original
+                // add one to the guess variable
+             
+            //TODO:check to see if we are at the end of the pattern, (guess is the same as pattern list count).
+                // call ComputerTurn() method
+                // else call GameOver method>>>>>>> master
         }
 
         public void GameOver()
@@ -112,7 +137,7 @@ namespace SimonSays
             f.Controls.Add(gs);
             gs.Focus();
 
-        }
+        }<<<<<<< master
 
         //TODO: create one of these event methods for each button
         private void greenButton_Click(object sender, EventArgs e)
@@ -210,5 +235,6 @@ namespace SimonSays
             if (Form1.pattern.Count == guess)
             { ComputerTurn(); }
         }
+   
     }
 }
