@@ -126,6 +126,18 @@
   <ItemGroup>
     <None Include="Resources\SimonSaysImage.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air element.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WaterSymbolSkylanders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\earth image.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire image.jfif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
